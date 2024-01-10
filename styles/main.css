@@ -1,7 +1,11 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 :root {
+
 }
 
 * {
+    font-family: "Open Sans", serif;
     box-sizing: border-box;
 }
 
@@ -9,5 +13,132 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: unset;
-    font-family: "Montserrat", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(227, 242, 253, 1);
+}
+
+main {
+    width: 700px;
+    padding: 50px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+}
+
+.edit {
+    position: absolute;
+    right: 30px;
+    text-decoration-line: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+    form {
+        gap: 30px;
+    }
+}
+
+form .col:first-child {
+    gap: 10px;
+}
+
+input {
+    padding-left: 10px;
+    font: inherit;
+    border: 1px solid lightgray;
+    height: 3rem;
+    width: 100%;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-wrapper svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.input-wrapper.icon-left svg {
+    left: 0;
+    margin-left: 0.5rem;
+}
+
+.input-wrapper.icon-left input {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    background-color: rgba(250, 250, 250, 1);
+}
+
+.input-wrapper.icon-right svg {
+    right: 0;
+    margin-right: 0.5rem;
+}
+
+.input-wrapper.icon-right input {
+    padding-right: 2rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.input-row > * {
+    flex: 1 1 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .input-row > * {
+        flex: 1 1 45%;
+    }
+}
+
+
+input::placeholder {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.expiration-inputs {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.pay-btn {
+    all: unset;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(41, 98, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 600;
 }
